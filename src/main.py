@@ -25,6 +25,18 @@ from dataset import JigsawDataset
 from train import loss_fn, train_fn, valid_fn
 
 
+
+import argparse
+
+
+parser = argparse.ArgumentParser()
+
+parser.add_argument('--device', type=str, default='tpu', help=['cpu', 'gpu', 'tpu'])
+parser.add_argument('--model', type=str, default='xlm-roberta-large')
+parser.add_argument('--epochs', type=int, default=3)
+parser.add_argument('--mode', type=str, default='inference', help=['train', 'inference'])
+parser.add_argument('')
+
 def run():
     # dataframes
     train_df = pd.read_csv(config.TRAIN)

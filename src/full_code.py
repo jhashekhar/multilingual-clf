@@ -1,3 +1,7 @@
+'''
+    Complete code of the training and inference
+'''
+
 # computational modules
 import numpy as np
 import pandas as pd
